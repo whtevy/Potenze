@@ -12,7 +12,7 @@ new LedLampada(
         "Branco Frio"
     ),
 
-    "../assets/img/1.png"
+    "assets/img/1.png"
 ),
 
 new SmartLampada(
@@ -72,7 +72,7 @@ new LedLampada(
         "Branco"
     ),
 
-    "assets/img/HIGH-BAY-MODULAR-150W-1024x819.png"
+    "assets/img/HIGH-BAY-150W.png"
 ),
 
 new LedLampada(
@@ -148,36 +148,6 @@ new LedLampada(
     ),
 
     "assets/img/IP66-1024x683.png"
-),
-
-new SmartLampada(
-    "Luminária Smart Bluetooth",
-    15,
-    1400,
-    "E27",
-    "25000h",
-
-    new VariacaoProduto(
-        "110",
-        "RGB"
-    ),
-
-    "assets/img/lampada_nova1.png"
-),
-
-new SmartLampada(
-    "AuraLight RGB Ligga",
-    20,
-    1600,
-    "E27",
-    "25000h",
-
-    new VariacaoProduto(
-        "220",
-        "RGB"
-    ),
-
-    "assets/img/lampada_nova2.png"
-),
+)
 
 ];

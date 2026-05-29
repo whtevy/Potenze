@@ -16,3 +16,11 @@ window.addEventListener('scroll', () => {
 
 });
 
+function salvarOrigem(){
+
+    sessionStorage.setItem(
+        "paginaOrigem",
+        window.location.href
+    );
+
+}
