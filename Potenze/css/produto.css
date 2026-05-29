@@ -1,0 +1,657 @@
+/* =========================================
+PRODUTO PAGE — AAA PREMIUM
+========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+    color:#111;
+    overflow-x:hidden;
+}
+
+/* =========================================
+HEADER
+========================================= */
+
+.header{
+    width:100%;
+    height:120px;
+
+    background:#000;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 7%;
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    z-index:999;
+
+    border-bottom:4px solid #CF2E2E;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.12);
+}
+
+.logo img{
+    width:220px;
+}
+
+nav{
+    display:flex;
+    gap:50px;
+}
+
+nav a{
+    color:rgb(0, 0, 0);
+    text-decoration:none;
+
+    font-size:1.05rem;
+    font-weight:600;
+
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#CF2E2E;
+}
+
+/* =========================================
+CONTAINER
+========================================= */
+
+#produtoDetalhe{
+    width:100%;
+    max-width:1380px;
+
+    margin:105px auto 50px;
+
+    padding:0 5%;
+}
+
+/* =========================================
+BOTÃO VOLTAR
+========================================= */
+
+.btn-voltar-box{
+    margin-bottom:25px;
+}
+
+.btn-voltar{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    background:#CF2E2E;
+    color:white;
+
+    text-decoration:none;
+
+    padding:12px 20px;
+
+    border-radius:12px;
+
+    font-weight:700;
+
+    transition:.3s;
+}
+
+.btn-voltar:hover{
+    background:#a32121;
+    transform:translateY(-2px);
+}
+
+/* =========================================
+TOPO
+========================================= */
+
+.topo-produto{
+    display:grid;
+    grid-template-columns:1fr 330px;
+
+    gap:24px;
+
+    align-items:start;
+
+    margin-bottom:30px;
+}
+
+/* =========================================
+GALERIA
+========================================= */
+
+.galeria{
+    background:white;
+
+    border-radius:22px;
+
+    padding:20px;
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,.05);
+}
+
+.imagem-principal{
+    width:100%;
+    height:340px;
+
+    background:#f7f7f7;
+
+    border-radius:16px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    overflow:hidden;
+
+    margin-bottom:16px;
+}
+
+.imagem-principal img{
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+
+    transition:.4s;
+}
+
+.imagem-principal img:hover{
+    transform:scale(1.02);
+}
+
+/* =========================================
+MINIATURAS
+========================================= */
+
+.miniaturas{
+    display:flex;
+    gap:10px;
+}
+
+.thumb{
+    width:80px;
+    height:70px;
+
+    background:#f3f3f3;
+
+    border-radius:10px;
+
+    padding:6px;
+
+    object-fit:contain;
+
+    cursor:pointer;
+
+    border:2px solid transparent;
+
+    transition:.3s;
+}
+
+.thumb:hover{
+    border-color:#CF2E2E;
+}
+
+.active-thumb{
+    border-color:#CF2E2E;
+}
+
+/* =========================================
+INFO LATERAL
+========================================= */
+
+.info-topo{
+    background:rgb(0, 0, 0);
+
+    border-radius:22px;
+
+    padding:24px;
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,.05);
+
+    display:flex;
+    flex-direction:column;
+}
+
+.info-topo h1{
+    font-size:1.6rem;
+    line-height:1.3;
+
+    margin-bottom:14px;
+}
+
+.modelo{
+    color:#666;
+
+    margin-bottom:16px;
+
+    font-size:.95rem;
+}
+
+.estrelas{
+    color:#ffcc00;
+
+    font-size:22px;
+
+    margin-bottom:20px;
+}
+
+/* STATUS */
+
+.status-produto{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    background:#f5f5f5;
+
+    border-radius:12px;
+
+    padding:12px;
+
+    margin-bottom:18px;
+}
+
+.status-dot{
+    width:10px;
+    height:10px;
+
+    border-radius:50%;
+
+    background:#22c55e;
+}
+
+/* RESUMO */
+
+.resumo-info{
+    display:grid;
+    gap:10px;
+
+    margin-bottom:22px;
+}
+
+.mini-info{
+    background:#fafafa;
+
+    border:1px solid #ececec;
+
+    border-radius:12px;
+
+    padding:12px;
+}
+
+.mini-info strong{
+    color:#CF2E2E;
+
+    display:block;
+
+    margin-bottom:4px;
+
+    font-size:.9rem;
+}
+
+.mini-info p{
+    color:#555;
+
+    font-size:.95rem;
+}
+
+/* BOTÕES */
+
+.btn-orcamento{
+    width:100%;
+
+    background:#CF2E2E;
+    color:white;
+
+    border:none;
+
+    padding:14px;
+
+    border-radius:12px;
+
+    font-size:.95rem;
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.btn-orcamento:hover{
+    background:#a81f1f;
+}
+
+.btn-pdf{
+    width:100%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-top:12px;
+
+    background:#efefef;
+    color:#111;
+
+    text-decoration:none;
+
+    padding:13px;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.btn-pdf:hover{
+    background:#dfdfdf;
+}
+
+/* =========================================
+MODELO BOX
+========================================= */
+
+.modelo-box{
+    width:fit-content;
+
+    background:#CF2E2E;
+    color:white;
+
+    padding:10px 20px;
+
+    border-radius:10px;
+
+    font-weight:700;
+
+    margin-bottom:24px;
+}
+
+/* =========================================
+ESPECIFICAÇÕES
+========================================= */
+
+.grid-especificacoes{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+
+    gap:14px;
+
+    margin-bottom:35px;
+}
+
+.spec{
+    background:white;
+
+    border-radius:14px;
+
+    padding:16px;
+
+    box-shadow:
+    0 4px 12px rgba(0,0,0,.04);
+
+    transition:.3s;
+}
+
+.spec:hover{
+    transform:translateY(-3px);
+}
+
+.spec strong{
+    display:block;
+
+    color:#CF2E2E;
+
+    margin-bottom:6px;
+
+    font-size:.95rem;
+}
+
+.spec p{
+    color:#555;
+
+    font-size:.95rem;
+}
+
+/* =========================================
+DESCRIÇÃO
+========================================= */
+
+.descricao-produto{
+    background:white;
+
+    border-radius:22px;
+
+    padding:28px;
+
+    margin-bottom:40px;
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,.05);
+}
+
+.descricao-produto h2{
+    font-size:1.8rem;
+
+    margin-bottom:16px;
+
+    color:#CF2E2E;
+}
+
+.descricao-produto p{
+    color:#555;
+
+    line-height:1.8;
+
+    margin-bottom:14px;
+
+    font-size:.96rem;
+}
+
+/* =========================================
+AVALIAÇÕES
+========================================= */
+
+.avaliacoes{
+    margin-bottom:50px;
+}
+
+.avaliacoes h2{
+    font-size:1.8rem;
+
+    margin-bottom:22px;
+}
+
+.mural-avaliacoes{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+}
+
+.avaliacao-card{
+    background:white;
+
+    border-radius:16px;
+
+    padding:20px;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,.04);
+
+    transition:.3s;
+}
+
+.avaliacao-card:hover{
+    transform:translateY(-2px);
+}
+
+.avaliacao-card h4{
+    margin-bottom:8px;
+    color:#111;
+}
+
+.avaliacao-card span{
+    color:#ffcc00;
+
+    display:block;
+
+    margin-bottom:10px;
+}
+
+.avaliacao-card p{
+    color:#666;
+
+    line-height:1.6;
+
+    font-size:.95rem;
+}
+
+/* =========================================
+SIMILARES
+========================================= */
+
+.similares h2{
+    font-size:1.8rem;
+
+    margin-bottom:24px;
+}
+
+.grid-similares{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+
+    gap:18px;
+}
+
+.card-similar{
+    background:white;
+
+    border-radius:18px;
+
+    padding:18px;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,.04);
+
+    transition:.3s;
+}
+
+.card-similar:hover{
+    transform:translateY(-4px);
+}
+
+.card-similar img{
+    width:100%;
+    height:150px;
+
+    object-fit:contain;
+
+    margin-bottom:14px;
+}
+
+.card-similar h3{
+    margin-bottom:8px;
+
+    font-size:1rem;
+
+    color:#000;
+}
+
+.card-similar p{
+    color:#666;
+
+    margin-bottom:14px;
+
+    font-size:.92rem;
+}
+
+.card-similar a{
+    display:inline-block;
+
+    background:#CF2E2E;
+    color:white;
+
+    text-decoration:none;
+
+    padding:10px 16px;
+
+    border-radius:10px;
+
+    font-weight:600;
+
+    font-size:.92rem;
+
+    transition:.3s;
+}
+
+.card-similar a:hover{
+    background:#a32121;
+}
+
+/* =========================================
+FOCUS AAA
+========================================= */
+
+button:focus,
+a:focus{
+    outline:3px solid #CF2E2E;
+    outline-offset:3px;
+}
+
+/* =========================================
+RESPONSIVO
+========================================= */
+
+@media(max-width:1100px){
+
+    .topo-produto{
+        grid-template-columns:1fr;
+    }
+
+    .grid-similares{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:800px){
+
+    nav{
+        display:none;
+    }
+
+    .grid-especificacoes{
+        grid-template-columns:1fr;
+    }
+
+    .mural-avaliacoes{
+        grid-template-columns:1fr;
+    }
+
+    .imagem-principal{
+        height:260px;
+    }
+
+    .header{
+        height:100px;
+    }
+
+    .logo img{
+        width:180px;
+    }
+
+}
